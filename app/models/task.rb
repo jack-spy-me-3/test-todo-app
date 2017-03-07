@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
+  belongs_to :list
   def toggle_complete!
-    update(complete: !complete)
+    self.update(complete: !complete)
   end
 
   def toggle_favorite!
